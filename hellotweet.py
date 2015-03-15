@@ -7,6 +7,7 @@ config_params=file('config.txt').read().split()
 class MyStreamListener(tweepy.StreamListener):
 	def on_status(self,status):
 		print status.text
+
 		return True
 
 	def on_error(self,status):
@@ -24,18 +25,5 @@ api=tweepy.API(auth)
 
 myStream=Stream(auth,mystreamListener)
 
-myStream.filter(track=['sachin'])
+myStream.filter(track=['DaleSteyn62','imVkohli','msd','dhoni','msdhoni','ImRo45','ashwinravi99','ImRaina','MClarke23','anilkumble1074','MahelaJay','ajinkyarahane88','Jaseholder98'])
 
-#public_tweets=api.user_timeline('balaaagi',count=70)
-# user=api.get_user('twitter')
-
-# print "############"
-# print user.screen_name
-# print user.followers.count
-# i=1;
-# print "############"
-# for tweet in public_tweets:
-# 	i=i+1
-# 	print tweet.text
-
-# print "no of tweets",i
